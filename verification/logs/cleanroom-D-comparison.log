@@ -1,0 +1,88 @@
+### CLEAN-ROOM COMPARISON AGAINST THE WORKING TREE
+### 2026-09-11T00:17:33Z
+### working tree : /home/claude/kev-schema-evolution
+### clean room   : /tmp/cleanroom-D
+### independent extraction of the release archive, fresh virtual
+### environment from requirements.lock, fresh clones of all three
+### pinned sources. verification/logs/ is excluded: those logs are
+### written by the runs themselves.
+
+identical            : 54
+differing            : 6
+only in working tree : 0  []
+only in clean room   : 0  []
+
+### IDENTICAL (byte-for-byte across two independent runs)
+  c2a418d84efb31d7  .gitignore
+  b2167de2a70e30b3  AUTHORS.json
+  cda8e7ecbd46b294  CITATION.cff
+  5014dad159f30ed9  LICENSE
+  c4394c9a1d58170e  LICENSE-DATA
+  fa4c13926e122749  LICENSE-REPORT
+  85aabb8bc62d9a8d  README.md
+  183377328a94ab63  code/00_metadata.py
+  31efdce041446351  code/01_fetch.py
+  2f89a3dc6314fcfa  code/02_build.py
+  a1d482f959516c52  code/03_qa.py
+  9cc3a4ca036f9d42  code/04_figures.py
+  9eb88ae187488c1f  code/05_document.py
+  1125ef1156a257fc  code/06_publish_gate.py
+  35e35509d3a8ebc8  code/07_release_notes.py
+  f9611340a9719511  code/08_render_docs.py
+  00ca564fe3de1df4  code/09_snapshot_links.py
+  1b76ed8f92e01f4e  code/10_cisa_issue.py
+  88186a7ba2b7f03e  code/build_pdf.sh
+  9402bb16c4dde4a2  code/release_state.py
+  3fd729af5c528545  code/run_all.sh
+  9523bf369fc3aaf0  code/tests/compare_cleanroom.py
+  8e3f7227f430fa39  code/tests/negative_release_tests.py
+  96a5bd748a7c2836  data/processed/artifacts.csv
+  b8237c153bcab05e  data/processed/catalog_growth.csv
+  fcaea4913c6661f1  data/processed/crosswalk.csv
+  6155f3f9c6524e5a  data/processed/field_presence_matrix.csv
+  80f008975d3b0c98  data/processed/indep_json_field_presence.csv
+  9be15be75a7ea164  data/processed/json_field_presence.csv
+  3af72fedbb6dea56  data/processed/qa_report.txt
+  ae927e5fe91dbe77  data/processed/schema_timeline.csv
+  577f4ccc06b7b7c6  data/raw/known_exploited_vulnerabilities_schema.json
+  cf02d84731b0564b  data/raw/snapshot_link_verification.json
+  62aa1ff6db84bc05  data/raw/third_source_csv_identity.csv
+  03ec366c95ad32ea  docs/BUILD_SPEC.md
+  3b204266fd47b906  docs/CISA_ISSUE.md
+  e9c5c81fe9dd553f  docs/CODEBOOK.md
+  71bc7d78b877dd1a  docs/ENVIRONMENT.md
+  7b474badda34c74e  docs/LIMITATIONS.md
+  28eab4dd846b363e  docs/NEXT_STEPS.md
+  8126ab88656687da  docs/PUBLISH_GUIDE.md
+  32d8649163476208  docs/RELEASE_NOTES.md
+  66b61983040104c1  docs/SNAPSHOT_LINKS.md
+  85861f9956dbb2f8  docs/VERIFY_CHECKLIST.md
+  bcb7d353148c0af6  metadata.json
+  c261ecee4bb4fad6  report/figures/fig01_field_timeline.png
+  b3495918dcd0166f  report/figures/fig02_catalog_growth.png
+  99bb14099b419450  report/tables/table01_change_events.md
+  00ec414a2c135224  requirements.lock
+  5e16c43db747e36b  templates/LIMITATIONS.md.template
+  ef9d751d938b490c  templates/README.md.template
+  c9aeb24dabdc45d1  verification/README.md
+  802c4d501d1fb612  verification/SHA256SUMS.txt
+  3487c1a9e45aa4d5  verification/VOLATILE.txt
+
+### DIFFERING — each needs a stated, checked explanation
+  data/raw/PROVENANCE.txt: 101 vs 106 lines; the clean room holds 5 more. Append-only, earlier lines unchanged: YES
+  data/raw/source_pins.json: 1 line(s) differ, 1 timestamp-only, 0 unexplained
+  data/raw/third_source_manifest.json: 1 line(s) differ, 1 timestamp-only, 0 unexplained
+  report/kev_schema_evolution.md: 1 line(s) differ, 1 timestamp-only, 0 unexplained
+  report/kev_schema_evolution.pdf: text layer identical once the generation timestamp is removed: YES
+  report/stats.json: 1 line(s) differ, 1 timestamp-only, 0 unexplained
+
+### FIGURES (defect A1 regression check: byte-identical under the pinned dependencies)
+  IDENTICAL  report/figures/fig01_field_timeline.png  c261ecee4bb4fad6
+  IDENTICAL  report/figures/fig02_catalog_growth.png  b3495918dcd0166f
+
+### RELEASE-STATE EVIDENCE
+  working tree: date-released in CITATION.cff: absent; DOI-shaped strings in README + CITATION.cff + report: 0; README status: DRAFT
+  clean room  : date-released in CITATION.cff: absent; DOI-shaped strings in README + CITATION.cff + report: 0; README status: DRAFT
+
+### VERDICT: NO UNEXPLAINED DIFFERENCES
+### END COMPARISON

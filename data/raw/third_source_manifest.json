@@ -1,0 +1,72 @@
+{
+  "purpose": "Reproducibility evidence for the third source. Records why its CSV files are excluded and pins the JSON files the corroboration rests on.",
+  "repository": "https://github.com/lucagrippa/cisa-kev-archive.git",
+  "commit": "276aa25018e0b1ba945ea0638f71682bd70422c1",
+  "access_date": "2026-09-11",
+  "accessed_utc": "2026-09-11T01:19:28Z",
+  "licence": "No licence file is present on the repository. The archived content is the CISA Known Exploited Vulnerabilities catalog, a US government work released under CC0 by CISA. This build reads that archived public-domain content for verification only. No file from the repository is copied into, redistributed by, or released with this project; the working clone lives in the git-ignored sources/ directory.",
+  "json_used": {
+    "directory": "json/",
+    "file_count": 1113,
+    "first_date": "2023-08-18",
+    "last_date": "2026-09-10",
+    "role": "Independently collected. The primary archive stored CSV only and never held these JSON files, which is what makes them a second witness rather than a copy.",
+    "event_date_hashes": [
+      {
+        "date": "2023-08-18",
+        "bytes": 874339,
+        "sha256": "fece752398179bad39ecb6b3055ff71043eb5329c4e10da51c46089282e94a2c"
+      },
+      {
+        "date": "2023-10-11",
+        "bytes": 911275,
+        "sha256": "40668e3437490e1b62b5103a04762dcb2ddfbdb5e26781da1da10b8cb8ba25f9"
+      },
+      {
+        "date": "2023-10-12",
+        "bytes": 987358,
+        "sha256": "7a60977fbe06a110a35a0a2bd25d2e68bed0e2972bcfd7ec74da9467195e6c20"
+      },
+      {
+        "date": "2024-06-25",
+        "bytes": 830904,
+        "sha256": "538520550a1b2841df1736d7206434c2eed861f83cd98c2572be75b38cdd8cca"
+      },
+      {
+        "date": "2024-06-26",
+        "bytes": 860690,
+        "sha256": "0f4017ae76770255bb8c36f4695e1737fdfe2addbd936edad259decea71bd70c"
+      },
+      {
+        "date": "2024-11-26",
+        "bytes": 452,
+        "sha256": "763be27c20f3e63ae662b62ee02021660a2fc9f60cdf449b229979c0a2a79bc8"
+      },
+      {
+        "date": "2026-08-31",
+        "bytes": 1618253,
+        "sha256": "25527b196142e9bfe5f3597ea31c302129b86e4240608ef76730b2533b61aae3"
+      },
+      {
+        "date": "2026-09-01",
+        "bytes": 1621705,
+        "sha256": "2043ec4073019154e781f687359bfd9759e4d1ca9a18befc99fbe0c4c93bbde8"
+      },
+      {
+        "date": "2026-09-02",
+        "bytes": 1682475,
+        "sha256": "c4560f429889b75a2010996b95d592498c4bdb8d88f4e3307cc4316ef4db675e"
+      }
+    ]
+  },
+  "csv_excluded": {
+    "directory": "csv/",
+    "dates_compared_with_primary": 1753,
+    "byte_identical_to_primary": 1590,
+    "differing_from_primary": 163,
+    "all_identical_before": "2023-09-12",
+    "dates_before_that_all_identical": 668,
+    "conclusion": "Excluded in full, for two distinct reasons. For every one of the 668 dates before 2023-09-12, the third repository's CSV is byte-identical to the primary archive's, indicating it was back-filled from that archive and is a copy rather than a witness. From 2023-09-12 onward the repository appears to collect its own CSVs, but those dates are already covered by its JSON files, which this build does use; counting both would count one collector twice. code/02_build.py reads only json/.",
+    "per_date_hashes_file": "third_source_csv_identity.csv"
+  }
+}

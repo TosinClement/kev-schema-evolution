@@ -1,0 +1,320 @@
+{
+  "as_of": "2026-09-09",
+  "data_cutoff": "2026-09-09",
+  "access_date": "2026-09-11",
+  "generated_utc": "2026-09-11T01:19:48Z",
+  "sources": {
+    "archive_repo": "https://github.com/hrbrmstr/cisa-known-exploited-vulns.git",
+    "archive_commit": "3e428ceaa1e18ce466db17c8b4c23f5a23e53c92",
+    "official_repo": "https://github.com/cisagov/kev-data.git",
+    "official_commit": "f6fafe2585c7cc2a7568d13d08024cf142b37d3a",
+    "indep_repo": "https://github.com/lucagrippa/cisa-kev-archive.git",
+    "indep_commit": "276aa25018e0b1ba945ea0638f71682bd70422c1",
+    "schema_sha256": "577f4ccc06b7b7c6a109e1a0d6457a26db7fc5219398ff2e287b9a7e14e2d9ef",
+    "third_source_manifest": {
+      "repository": "https://github.com/lucagrippa/cisa-kev-archive.git",
+      "commit": "276aa25018e0b1ba945ea0638f71682bd70422c1",
+      "access_date": "2026-09-11",
+      "licence": "No licence file is present on the repository. The archived content is the CISA Known Exploited Vulnerabilities catalog, a US government work released under CC0 by CISA. This build reads that archived public-domain content for verification only. No file from the repository is copied into, redistributed by, or released with this project; the working clone lives in the git-ignored sources/ directory.",
+      "json_used": {
+        "directory": "json/",
+        "file_count": 1113,
+        "first_date": "2023-08-18",
+        "last_date": "2026-09-10",
+        "role": "Independently collected. The primary archive stored CSV only and never held these JSON files, which is what makes them a second witness rather than a copy.",
+        "event_date_hashes": [
+          {
+            "date": "2023-08-18",
+            "bytes": 874339,
+            "sha256": "fece752398179bad39ecb6b3055ff71043eb5329c4e10da51c46089282e94a2c"
+          },
+          {
+            "date": "2023-10-11",
+            "bytes": 911275,
+            "sha256": "40668e3437490e1b62b5103a04762dcb2ddfbdb5e26781da1da10b8cb8ba25f9"
+          },
+          {
+            "date": "2023-10-12",
+            "bytes": 987358,
+            "sha256": "7a60977fbe06a110a35a0a2bd25d2e68bed0e2972bcfd7ec74da9467195e6c20"
+          },
+          {
+            "date": "2024-06-25",
+            "bytes": 830904,
+            "sha256": "538520550a1b2841df1736d7206434c2eed861f83cd98c2572be75b38cdd8cca"
+          },
+          {
+            "date": "2024-06-26",
+            "bytes": 860690,
+            "sha256": "0f4017ae76770255bb8c36f4695e1737fdfe2addbd936edad259decea71bd70c"
+          },
+          {
+            "date": "2024-11-26",
+            "bytes": 452,
+            "sha256": "763be27c20f3e63ae662b62ee02021660a2fc9f60cdf449b229979c0a2a79bc8"
+          },
+          {
+            "date": "2026-08-31",
+            "bytes": 1618253,
+            "sha256": "25527b196142e9bfe5f3597ea31c302129b86e4240608ef76730b2533b61aae3"
+          },
+          {
+            "date": "2026-09-01",
+            "bytes": 1621705,
+            "sha256": "2043ec4073019154e781f687359bfd9759e4d1ca9a18befc99fbe0c4c93bbde8"
+          },
+          {
+            "date": "2026-09-02",
+            "bytes": 1682475,
+            "sha256": "c4560f429889b75a2010996b95d592498c4bdb8d88f4e3307cc4316ef4db675e"
+          }
+        ]
+      },
+      "csv_excluded": {
+        "directory": "csv/",
+        "dates_compared_with_primary": 1753,
+        "byte_identical_to_primary": 1590,
+        "differing_from_primary": 163,
+        "all_identical_before": "2023-09-12",
+        "dates_before_that_all_identical": 668,
+        "conclusion": "Excluded in full, for two distinct reasons. For every one of the 668 dates before 2023-09-12, the third repository's CSV is byte-identical to the primary archive's, indicating it was back-filled from that archive and is a copy rather than a witness. From 2023-09-12 onward the repository appears to collect its own CSVs, but those dates are already covered by its JSON files, which this build does use; counting both would count one collector twice. code/02_build.py reads only json/.",
+        "per_date_hashes_file": "third_source_csv_identity.csv"
+      }
+    }
+  },
+  "coverage": {
+    "snapshot_files": 1760,
+    "usable_snapshots": 1758,
+    "unusable_snapshots": 2,
+    "first_date": "2021-11-12",
+    "last_date": "2026-09-09",
+    "span_days": 1763,
+    "coverage_pct": 99.72,
+    "coverage_gaps": 4
+  },
+  "catalog": {
+    "first_count": 291,
+    "last_count": 1703,
+    "net_growth": 1412,
+    "growth_multiple": 5.85,
+    "days_with_decrease": 6
+  },
+  "fields": {
+    "n_fields_ever": 12,
+    "spans": {
+      "cveID": {
+        "first_seen": "2021-11-12",
+        "last_seen": "2026-09-09",
+        "days_present": 1758,
+        "share_of_days": 1.0
+      },
+      "vendorProject": {
+        "first_seen": "2021-11-12",
+        "last_seen": "2026-09-09",
+        "days_present": 1758,
+        "share_of_days": 1.0
+      },
+      "product": {
+        "first_seen": "2021-11-12",
+        "last_seen": "2026-09-09",
+        "days_present": 1758,
+        "share_of_days": 1.0
+      },
+      "vulnerabilityName": {
+        "first_seen": "2021-11-12",
+        "last_seen": "2026-09-09",
+        "days_present": 1758,
+        "share_of_days": 1.0
+      },
+      "dateAdded": {
+        "first_seen": "2021-11-12",
+        "last_seen": "2026-09-09",
+        "days_present": 1758,
+        "share_of_days": 1.0
+      },
+      "shortDescription": {
+        "first_seen": "2021-11-12",
+        "last_seen": "2026-09-09",
+        "days_present": 1758,
+        "share_of_days": 1.0
+      },
+      "requiredAction": {
+        "first_seen": "2021-11-12",
+        "last_seen": "2026-09-09",
+        "days_present": 1758,
+        "share_of_days": 1.0
+      },
+      "dueDate": {
+        "first_seen": "2021-11-12",
+        "last_seen": "2026-09-09",
+        "days_present": 1758,
+        "share_of_days": 1.0
+      },
+      "knownRansomwareCampaignUse": {
+        "first_seen": "2023-10-12",
+        "last_seen": "2026-09-09",
+        "days_present": 1060,
+        "share_of_days": 0.603
+      },
+      "forensicTriage": {
+        "first_seen": "2026-09-01",
+        "last_seen": "2026-09-09",
+        "days_present": 9,
+        "share_of_days": 0.0051
+      },
+      "notes": {
+        "first_seen": "2021-11-12",
+        "last_seen": "2026-09-09",
+        "days_present": 1594,
+        "share_of_days": 0.9067
+      },
+      "cwes": {
+        "first_seen": "2024-06-26",
+        "last_seen": "2026-09-09",
+        "days_present": 802,
+        "share_of_days": 0.4562
+      }
+    }
+  },
+  "events": {
+    "total_schema_evolution_events": 6,
+    "field_presence_transitions": 5,
+    "naming_or_canonicalization_events": 1,
+    "naming_event_dates": [
+      "2021-12-01"
+    ],
+    "n_change_events": 5,
+    "notes_boundary": {
+      "removed_prev_date": "2021-12-10",
+      "removed_date": "2021-12-11",
+      "removed_prev_count": 296,
+      "removed_count": 309,
+      "removed_new_entries": 13,
+      "restored_prev_date": "2022-05-23",
+      "restored_date": "2022-05-24",
+      "restored_prev_count": 683,
+      "restored_count": 703,
+      "restored_new_entries": 20,
+      "notes_filled_before_removal": 15,
+      "notes_rows_before_removal": 296,
+      "notes_filled_on_return": 0,
+      "notes_rows_on_return": 703
+    },
+    "list": [
+      {
+        "date": "2021-12-11",
+        "event": "field_removed",
+        "field": "notes"
+      },
+      {
+        "date": "2022-05-24",
+        "event": "field_added",
+        "field": "notes"
+      },
+      {
+        "date": "2023-10-12",
+        "event": "field_added",
+        "field": "knownRansomwareCampaignUse"
+      },
+      {
+        "date": "2024-06-26",
+        "event": "field_added",
+        "field": "cwes"
+      },
+      {
+        "date": "2026-09-01",
+        "event": "field_added",
+        "field": "forensicTriage"
+      }
+    ],
+    "rename_date": "2021-12-01",
+    "notes_removed": "2021-12-11",
+    "notes_restored": "2022-05-24",
+    "notes_absent_days": 164
+  },
+  "crossvalidation": {
+    "n_sources": 3,
+    "multi_source_days": 1115,
+    "three_source_days": 223,
+    "agree_days": 1114,
+    "agreement_pct": 99.91,
+    "disagreements": 1,
+    "disagreement_dates": [
+      "2026-09-01"
+    ],
+    "json_days": 230,
+    "json_first": "2025-01-27",
+    "indep_days": 1112,
+    "indep_first": "2023-08-18",
+    "uncorroborated_until": "2023-08-18"
+  },
+  "schema": {
+    "declared_draft": "http://json-schema.org/draft-07/schema#",
+    "fields_described": 11,
+    "fields_observed": 12,
+    "undescribed_fields": [
+      "forensicTriage"
+    ],
+    "additional_properties": "unset (permissive)",
+    "validation_errors": 0,
+    "schema_commits": 1,
+    "schema_last_modified": "2025-01-27",
+    "schema_stale_days": 590,
+    "forensic_triage_first_seen": "2026-09-01",
+    "forensic_triage_undocumented_days": 8,
+    "forensic_triage_coverage_pct": 100.0
+  },
+  "artifacts": {
+    "total": 24,
+    "by_kind": {
+      "bom_change": 3,
+      "record_count_decrease": 6,
+      "quoting_change": 8,
+      "coverage_gap": 4,
+      "unusable_snapshot": 3
+    },
+    "unusable_dates": [
+      "2024-11-26",
+      "2024-11-27"
+    ],
+    "unusable_all_sources": 3,
+    "capture_failures": [
+      {
+        "date": "2024-11-26",
+        "source": "csv_daily",
+        "service": "akamai_edge",
+        "kind": "access_denied",
+        "ref": "18.905ed617.1732644671.29b368e7",
+        "refused_utc": "2024-11-26T18:11:11Z",
+        "url": "http://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv"
+      },
+      {
+        "date": "2024-11-26",
+        "source": "json_independent",
+        "service": "akamai_edge",
+        "kind": "access_denied",
+        "ref": "18.fea4217.1732663968.f6f2710",
+        "refused_utc": "2024-11-26T23:32:48Z",
+        "url": "http://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
+      },
+      {
+        "date": "2024-11-27",
+        "source": "csv_daily",
+        "service": "akamai_edge",
+        "kind": "access_denied",
+        "ref": "18.ad643017.1732731067.627e141d",
+        "refused_utc": "2024-11-27T18:11:07Z",
+        "url": "http://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv"
+      }
+    ]
+  },
+  "draft": false,
+  "release": {
+    "mode": "final",
+    "version": "0.1.0",
+    "version_string": "v0.1.0",
+    "doi": "10.5281/zenodo.22699424",
+    "doi_url": "https://doi.org/10.5281/zenodo.22699424",
+    "release_date": "2026-09-11"
+  }
+}

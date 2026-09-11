@@ -1,0 +1,39 @@
+{
+  "_comment": "Canonical project metadata. Single source of truth for the title and version. code/00_metadata.py renders CITATION.cff from this file; code/05_document.py sets the report title from it; code/build_pdf.sh reads the PDF title from it; code/03_qa.py fails the build if the README heading, the report, CITATION.cff or the rendered PDF disagree with it. title_ascii is the same title with the en-dash replaced by a hyphen, for contexts that cannot encode it (wkhtmltopdf's PDF document properties). Do not restate the title anywhere else.",
+  "title": "Schema Evolution in the CISA Known Exploited Vulnerabilities Catalog, 2021\u20132026: A Three-Source Reconstruction",
+  "title_ascii": "Schema Evolution in the CISA Known Exploited Vulnerabilities Catalog, 2021-2026: A Three-Source Reconstruction",
+  "short_name": "kev-schema-evolution",
+  "version": "0.1.0",
+  "release": {
+    "_comment": "CANONICAL RELEASE STATE. One source of truth for draft/final mode, the DOI and the release date. code/release_state.py is the only reader; every generated artifact (README banner, CITATION.cff, the report's first page, the CISA issue text, the QA header, the figure stamps) derives from it. In draft mode doi and release_date are null and no DOI appears in any output. Setting mode to 'final' with either one unset or placeholder-shaped makes the build refuse to run.",
+    "mode": "final",
+    "doi": "10.5281/zenodo.22699424",
+    "release_date": "2026-09-11"
+  },
+  "author_verification": {
+    "_comment": "Dates on which the author personally performed a verification step. These are historical facts about what a person did and must never be derived from a build date: docs/LIMITATIONS.md item 10 previously took this from stats.access_date, so re-running the pipeline on a later day silently changed the date on which the author was said to have checked the live CISA URLs. Caught during the final build for v0.1.0.",
+    "section_b_live_check_date": "2026-09-10"
+  },
+  "repository": "https://github.com/TosinClement/kev-schema-evolution",
+  "superseded_titles": [
+    "Schema evolution in the CISA Known Exploited Vulnerabilities catalog, 2021-2026",
+    "Schema evolution in the CISA KEV catalog, 2021-2026",
+    "Schema evolution in the CISA KEV catalog, 2021\u20132026"
+  ],
+  "keywords": [
+    "CISA KEV",
+    "known exploited vulnerabilities",
+    "schema evolution",
+    "vulnerability management",
+    "data provenance",
+    "reproducibility",
+    "data versioning",
+    "JSON Schema",
+    "open data"
+  ],
+  "licenses": {
+    "code": "MIT",
+    "derived_data": "CC BY 4.0",
+    "report": "CC BY 4.0"
+  }
+}

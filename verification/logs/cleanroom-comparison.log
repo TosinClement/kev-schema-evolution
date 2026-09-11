@@ -1,0 +1,40 @@
+### CLEAN ROOM COMPARISON — 2026-09-10T15:55:14Z
+### A: /tmp/crA/run    B: /tmp/crB/run   (independent dirs, venvs, clones)
+
+--- files differing between the two independent runs (release files only) ---
+Files data/raw/PROVENANCE.txt and data/raw/PROVENANCE.txt differ
+Files data/raw/source_pins.json and data/raw/source_pins.json differ
+Files data/raw/third_source_manifest.json and data/raw/third_source_manifest.json differ
+Files report/kev_schema_evolution.md and report/kev_schema_evolution.md differ
+Files report/kev_schema_evolution.pdf and report/kev_schema_evolution.pdf differ
+Files report/stats.json and report/stats.json differ
+
+--- expected-difference analysis ---
+PROVENANCE.txt        : append-only fetch log; timestamps differ by design
+source_pins.json      : fetched_utc differs; all pins identical
+third_source_manifest : accessed_utc differs; all evidence identical
+stats.json            : generated_utc differs; all values identical
+report .md            : dateline timestamp differs; body identical
+report .pdf           : CreationDate differs; text layer identical once stripped
+
+--- byte-identity of the outputs that must not vary ---
+report/figures/fig01_field_timeline.png        IDENTICAL  c261ecee4bb4fad65da76b2e6da7fa1d
+report/figures/fig02_catalog_growth.png        IDENTICAL  b3495918dcd0166f0971171c756738b1
+data/processed/field_presence_matrix.csv       IDENTICAL  6155f3f9c6524e5ab3e3e98cb3bd6de7
+data/processed/schema_timeline.csv             IDENTICAL  ae927e5fe91dbe77349854090c205ac3
+data/processed/crosswalk.csv                   IDENTICAL  fcaea4913c6661f15bcc4cd2690e591e
+data/processed/json_field_presence.csv         IDENTICAL  9be15be75a7ea164f7d8605c6e43d353
+data/processed/indep_json_field_presence.csv   IDENTICAL  80f008975d3b0c984f1aff6636e24d6b
+data/processed/catalog_growth.csv              IDENTICAL  b8237c153bcab05e8b376fb0fbfc4c50
+data/processed/artifacts.csv                   IDENTICAL  96a5bd748a7c28363d1213cd40b6c478
+data/processed/qa_report.txt                   IDENTICAL  7629fa89f0df9f7191998c2e6b53614e
+data/raw/third_source_csv_identity.csv         IDENTICAL  62aa1ff6db84bc05580f05ae5c93446c
+README.md                                      IDENTICAL  bfe133f3039c4cfe2587374fc1a633de
+CITATION.cff                                   IDENTICAL  38d19a456416d02d8f3f615bb20ab547
+docs/LIMITATIONS.md                            IDENTICAL  d118bacaa1eda440b4af9551a38b04f3
+docs/RELEASE_NOTES.md                          IDENTICAL  b4c565e29ebfd4387d33e9c31333091c
+
+--- timestamp-stripped equivalence ---
+stats.json (minus generated_utc)               IDENTICAL
+report .md (minus dateline)                    IDENTICAL
+PDF text layer (minus timestamp)               IDENTICAL

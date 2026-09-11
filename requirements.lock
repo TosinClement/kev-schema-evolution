@@ -1,0 +1,35 @@
+# Dependency lock for the KEV schema-evolution pipeline.
+#
+# Fully pinned, including transitive dependencies. Install with:
+#     python -m venv venv
+#     venv/bin/pip install -r requirements.lock
+#
+# Validated against Python 3.11.15 on Linux (x86_64).
+#
+# Why pinned: matplotlib's tight-bbox rounding changes between minor versions.
+# An unpinned build produced figures differing by one pixel in width between
+# matplotlib 3.10.9 and 3.11.1, which broke byte-level reproducibility of the
+# figures even though every data table was identical. See docs/VERIFY_CHECKLIST.md
+# Section A, defect A1.
+#
+# Direct dependencies: matplotlib, jsonschema, PyYAML. Everything else is
+# resolved from those.
+
+PyYAML==6.0.3
+attrs==26.1.0
+contourpy==1.3.3
+cycler==0.12.1
+fonttools==4.64.0
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+kiwisolver==1.5.1
+matplotlib==3.11.1
+numpy==2.4.6
+packaging==26.3
+pillow==12.3.0
+pyparsing==3.3.2
+python-dateutil==2.9.0.post0
+referencing==0.37.0
+rpds-py==2026.6.3
+six==1.17.0
+typing_extensions==4.16.0

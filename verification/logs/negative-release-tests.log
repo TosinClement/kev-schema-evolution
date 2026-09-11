@@ -1,0 +1,59 @@
+========================================================================
+NEGATIVE TESTS — release-state gates (Option B)
+Each case breaks the release state or a generated artifact on purpose
+and asserts the specific failure. Simulated release DOI: 10.5281/zenodo.9999999 (fake, temporary copy only).
+========================================================================
+
+A. FINAL MODE REFUSES INCOMPLETE RELEASE STATE
+  PASS  A1. build refuses: doi unset
+  PASS  A2. build refuses: doi is a placeholder
+  PASS  A3. build refuses: doi malformed
+  PASS  A4. build refuses: release date unset
+  PASS  A5. build refuses: release date malformed
+  PASS  A6. build refuses: release date is a placeholder
+
+B. --final IS AN ASSERTION, NOT A SWITCH
+  PASS  B1. --final on a draft state refuses to build
+  PASS  B2. stats.json was not switched to final by the flag
+        draft=True
+
+C. DRAFT BUILDS ARE NOT PUBLISHABLE
+  PASS  C1. gate blocks a draft build
+  PASS  C2. gate blocks a DOI that appears in a draft build
+
+D. A CORRECT RELEASE STATE CLEARS THE GATE
+  PASS  D1. simulated release passes the gate
+  PASS  D2. README banner shows released status and the DOI
+  PASS  D3. README carries the Zenodo DOI badge
+  PASS  D4. CITATION.cff carries the DOI and the release date
+  PASS  D5. report first page carries the DOI
+  PASS  D6. report DRAFT banner is gone
+  PASS  D7. CISA issue text carries the DOI and no placeholder
+
+E. INCONSISTENCY BETWEEN FILES IS CAUGHT
+  PASS  E1. hand-edited README status banner
+  PASS  E2. README left with a DRAFT status
+  PASS  E3. DOI in CITATION.cff disagrees
+  PASS  E4. release date in CITATION.cff disagrees
+  PASS  E5. version in CITATION.cff disagrees
+  PASS  E6. a second, different DOI appears in the report
+  PASS  E7. the DOI is missing from the CISA issue text
+  PASS  E8. gate is clear again once every file is restored
+
+F. PLACEHOLDERS THAT PREVIOUSLY EVADED THE GATE
+  PASS  F1. [RELEASE_DATE] is now caught
+  PASS  F2. [Zenodo DOI] is now caught
+  PASS  F3. [GITHUB_USERNAME] is now caught
+  PASS  F4. gate is clear once the probe file is removed
+
+G. CSV-EXCLUSION LANGUAGE (QA gate Q14)
+  PASS  G1. unconditional claim is rejected
+  PASS  G2. scoped claim with no derived reference is rejected
+  PASS  G3. a wrong boundary date is rejected
+  PASS  G4. gate passes again once the probe is removed
+  PASS  G5. the original defect, reintroduced in a source comment, is caught
+  PASS  G6. gate passes again once the comment is restored
+
+========================================================================
+NEGATIVE TESTS: 35/35 passed
+========================================================================

@@ -1,0 +1,25 @@
+date,kind,detail,bytes,source
+2021-11-18,bom_change,BOM removed (prev 2021-11-17),106053,
+2022-04-01,record_count_decrease,610 -> 609 (prev 2022-03-31),210954,
+2022-05-14,record_count_decrease,661 -> 660 (prev 2022-05-13),227086,
+2022-06-08,quoting_change,header quoting on (prev 2022-06-07),277487,
+2022-08-05,bom_change,BOM added (prev 2022-08-04),269843,
+2022-08-05,quoting_change,header quoting off (prev 2022-08-04),269843,
+2022-08-09,bom_change,BOM removed (prev 2022-08-08),270659,
+2022-08-11,quoting_change,header quoting on (prev 2022-08-10),285289,
+2023-03-10,quoting_change,header quoting off (prev 2023-03-09),314470,
+2023-03-14,quoting_change,header quoting on (prev 2023-03-13),333014,
+2023-03-15,quoting_change,header quoting off (prev 2023-03-14),315937,
+2023-03-16,quoting_change,header quoting on (prev 2023-03-15),333466,
+2023-03-31,record_count_decrease,906 -> 905 (prev 2023-03-30),337506,
+2023-05-11,coverage_gap,1 day(s) missing after 2023-05-09,,
+2023-10-04,record_count_decrease,1014 -> 1011 (prev 2023-10-03),392115,
+2023-11-15,quoting_change,header quoting off (prev 2023-11-14),405886,
+2023-12-01,record_count_decrease,1043 -> 1042 (prev 2023-11-30),408920,
+2024-09-25,record_count_decrease,1182 -> 1181 (prev 2024-09-24),568363,
+2024-11-26,unusable_snapshot,markup captured instead of CSV; service=akamai_edge; kind=access_denied; ref=18.905ed617.1732644671.29b368e7; refused_utc=2024-11-26T18:11:11Z; url=http://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv,453,csv_daily
+2024-11-26,unusable_snapshot,markup captured instead of JSON; service=akamai_edge; kind=access_denied; ref=18.fea4217.1732663968.f6f2710; refused_utc=2024-11-26T23:32:48Z; url=http://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json,,json_independent
+2024-11-27,unusable_snapshot,markup captured instead of CSV; service=akamai_edge; kind=access_denied; ref=18.ad643017.1732731067.627e141d; refused_utc=2024-11-27T18:11:07Z; url=http://www.cisa.gov/sites/default/files/csv/known_exploited_vulnerabilities.csv,453,csv_daily
+2024-11-28,coverage_gap,2 day(s) missing after 2024-11-25,,
+2026-08-07,coverage_gap,1 day(s) missing after 2026-08-05,,
+2026-08-28,coverage_gap,1 day(s) missing after 2026-08-26,,

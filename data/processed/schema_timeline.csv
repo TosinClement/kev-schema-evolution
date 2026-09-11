@@ -1,0 +1,14 @@
+track,date,event,field,prev_date,detail
+csv_daily,2021-11-12,baseline,,,cveID|vendorProject|product|vulnerabilityName|dateAdded|shortDescription|requiredAction|dueDate|notes
+csv_daily,2021-12-01,naming_convention_change,(all fields),2021-11-30,label_case -> camel_case; example: CVE -> cveID
+csv_daily,2021-12-11,field_removed,notes,2021-12-10,present on 2021-12-10
+csv_daily,2022-05-24,field_added,notes,2022-05-23,absent on 2022-05-23
+csv_daily,2023-10-12,field_added,knownRansomwareCampaignUse,2023-10-11,absent on 2023-10-11
+csv_daily,2024-06-26,field_added,cwes,2024-06-25,absent on 2024-06-25
+csv_daily,2026-09-01,field_added,forensicTriage,2026-08-31,absent on 2026-08-31
+json_independent,2023-08-18,baseline,,,cveID|dateAdded|dueDate|notes|product|requiredAction|shortDescription|vendorProject|vulnerabilityName
+json_independent,2023-10-12,field_added,knownRansomwareCampaignUse,2023-10-11,absent on 2023-10-11
+json_independent,2024-06-26,field_added,cwes,2024-06-25,absent on 2024-06-25
+json_independent,2026-09-02,field_added,forensicTriage,2026-09-01,absent on 2026-09-01
+json_official,2025-01-27,baseline,,,cveID|cwes|dateAdded|dueDate|knownRansomwareCampaignUse|notes|product|requiredAction|shortDescription|vendorProject|vulnerabilityName
+json_official,2026-09-01,field_added,forensicTriage,2026-08-31,absent on 2026-08-31

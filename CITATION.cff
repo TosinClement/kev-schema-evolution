@@ -1,0 +1,49 @@
+# GENERATED FILE — do not edit by hand.
+# Written by code/00_metadata.py from metadata.json, AUTHORS.json and
+# report/stats.json. Edit those, then re-run the pipeline.
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+type: dataset
+title: "Schema Evolution in the CISA Known Exploited Vulnerabilities Catalog, 2021–2026: A Three-Source Reconstruction"
+abstract: >-
+  A dated, three-source reconstruction of schema evolution in the CISA Known
+  Exploited Vulnerabilities (KEV) catalog, which is published without a
+  revision history. Built from 1,758 daily snapshots spanning 2021-11-12 to
+  2026-09-09 and cross-validated against two additional sources — CISA's
+  official Git mirror and a second independent archive — across 1,115
+  multi-source days at 99.91% agreement, it identifies and dates 6
+  schema-evolution events: 5 field-presence transitions and 1 naming or
+  canonicalization event. A supporting, time-bound observation is also
+  reported: as of the 2026-09-09 data cutoff, with sources accessed
+  2026-09-11, the forensicTriage field was present on 100.0% of the 1,703
+  records in the live catalog but was not described in CISA's published JSON
+  schema.
+version: "0.1.0"
+date-released: "2026-09-11"
+doi: "10.5281/zenodo.22699424"
+authors:
+  - family-names: "Clement"
+    given-names: "Tosin"
+    orcid: "https://orcid.org/0009-0001-2055-5113"
+    email: "clementtosin92@gmail.com"
+    affiliation: "Independent Researcher"
+license: CC-BY-4.0
+license-url: "https://creativecommons.org/licenses/by/4.0/"
+repository-code: "https://github.com/TosinClement/kev-schema-evolution"
+keywords:
+  - "CISA KEV"
+  - "known exploited vulnerabilities"
+  - "schema evolution"
+  - "vulnerability management"
+  - "data provenance"
+  - "reproducibility"
+  - "data versioning"
+  - "JSON Schema"
+  - "open data"
+references:
+  - type: data
+    title: "Known Exploited Vulnerabilities Catalog"
+    authors:
+      - name: "Cybersecurity and Infrastructure Security Agency"
+    url: "https://github.com/cisagov/kev-data"
+    license: CC0-1.0

@@ -1,0 +1,42 @@
+DERIVED DATA LICENCE
+
+The derived data in data/processed/ and the provenance records in data/raw/ are
+licensed under the Creative Commons Attribution 4.0 International License
+(CC BY 4.0).
+
+  field_presence_matrix.csv        schema_timeline.csv
+  crosswalk.csv                    json_field_presence.csv
+  indep_json_field_presence.csv    catalog_growth.csv
+  artifacts.csv                    qa_report.txt
+  source_pins.json                 PROVENANCE.txt
+  third_source_manifest.json       third_source_csv_identity.csv
+
+Attribution:
+  Clement, T. (2026). Schema evolution in the CISA Known Exploited
+  Vulnerabilities catalog, 2021-2026.
+
+Full text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+
+RIGHTS STATEMENT
+
+Scope of this licence.
+CC BY 4.0 applies to the original selection, arrangement, reconstruction,
+annotation and documentation contributed by this project, to the extent those
+elements are protected by copyright or database rights in a given jurisdiction.
+Where no such rights subsist, none are asserted and no permission is required.
+
+What this licence does not cover.
+It does not restrict the underlying CISA Known Exploited Vulnerabilities
+catalog, a United States government work released under CC0 by CISA
+(https://www.cisa.gov/sites/default/files/licenses/kev/license.txt). That
+catalog remains public-domain material and is unaffected by anything in this
+file. It does not restrict any third-party content. Facts about the catalog --
+which fields were present on which dates -- are not owned by this project, and
+this licence is not a claim over them.
+
+What attribution means here.
+CC BY requires attribution from anyone who relies on rights the licence covers.
+It imposes no obligation where those rights do not apply. It is a licence
+condition, not a detection mechanism: it does not guarantee that reuse will be
+visible, reported, or discoverable.

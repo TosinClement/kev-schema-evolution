@@ -1,0 +1,34 @@
+# Files that legitimately differ from the clean-room runs, and why.
+# Everything else in verification/SHA256SUMS.txt was byte-identical across
+# both independent clean-room runs.
+#
+# -- embed a build timestamp --
+data/raw/PROVENANCE.txt
+data/raw/source_pins.json
+data/raw/third_source_manifest.json
+report/kev_schema_evolution.md
+report/kev_schema_evolution.pdf
+report/stats.json
+#
+# -- records events that necessarily occur AFTER the tests --
+# The checklist carries the author's sign-offs, which are given once the
+# clean-room evidence has been reviewed. Its hash therefore postdates the
+# runs by design and is not evidence of drift.
+docs/VERIFY_CHECKLIST.md
+#
+# docs/LIMITATIONS.md is regenerated from its template and IS byte-reproducible,
+# but item 10 was amended after the clean-room runs to record the author's
+# direct check of the canonical CISA URLs (Section B). Its hash in this manifest
+# therefore postdates the logs; re-running the pipeline reproduces it exactly.
+
+#
+# -- appended after the Option B release-state change (clean room C) --
+# data/raw/PROVENANCE.txt is an append-only ledger: each run adds one line per
+# source fetched, so its length grows with the number of runs and its new lines
+# differ only in their timestamps. It was already listed above.
+#
+# .gitignore gained `venv/` after the clean-room archive was built, so that the
+# `git add -A` in docs/PUBLISH_GUIDE.md cannot commit the virtual environment
+# the README tells the reader to create. Expect it to differ from clean rooms
+# A, B and C.
+.gitignore
