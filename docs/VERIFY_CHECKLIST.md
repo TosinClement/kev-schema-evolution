@@ -665,14 +665,14 @@ under a distinct name. No content was affected.
       recorded as such by the author. The only remaining findings are warnings
       in `docs/PUBLISH_GUIDE.md`, which is one of the four exempted process
       documents and legitimately contains the words the gate looks for.
-- [ ] Push, then create the GitHub release from `docs/RELEASE_NOTES.md`.
+- [x] Push, then create the GitHub release from `docs/RELEASE_NOTES.md`.
       *Publish guide, step 5.*
-- [ ] Publish the reserved Zenodo deposit. **Irreversible.**
+- [x] Publish the reserved Zenodo deposit. **Irreversible.**
       *Publish guide, step 6.*
-- [ ] Verify the DOI resolves and the badge renders. *Publish guide, step 7.*
-- [ ] File the CISA issue by pasting `docs/CISA_ISSUE.md` — after the DOI
+- [x] Verify the DOI resolves and the badge renders. *Publish guide, step 7.*
+- [x] File the CISA issue by pasting `docs/CISA_ISSUE.md` — after the DOI
       resolves, never before (ruling V5). *Publish guide, step 8.*
-- [ ] Evidence log, same day. *Publish guide, step 9.*
+- [x] Evidence log, same day. *Publish guide, step 9.*
 
 ### What Option B changed, and the defects it exposed
 
